@@ -2,7 +2,6 @@ import Head from "next/head"
 import Image from "next/image"
 import Header from "../components/Header"
 import useCart from "../hooks/useCart"
-import FlipMove from "react-flip-move"
 import { useMoralis } from "react-moralis"
 import CartProduct from "../components/CartProduct"
 import Router from "next/router"
@@ -98,14 +97,12 @@ const Cart = () => {
                             {cart.length === 0 ? "Your Amazon Cart is empty." : "Your Shopping Cart"}
                         </h1>
 
-                        <FlipMove>
-                            {cart.map(({ id, title, price, rating, description, category, image, hasPrime }, i) => (
-                                <CartProduct
-                                    key={i}
-                                    {...{ id, title, price, rating, description, category, image, hasPrime }}
-                                />
-                            ))}
-                        </FlipMove>
+                        {cart.map(({ id, title, price, rating, description, category, image, hasPrime }, i) => (
+                            <CartProduct
+                                key={i}
+                                {...{ id, title, price, rating, description, category, image, hasPrime }}
+                            />
+                        ))}
                     </div>
                 </div>
 

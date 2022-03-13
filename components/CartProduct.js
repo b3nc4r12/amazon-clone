@@ -1,14 +1,13 @@
 import Image from "next/image"
-import { forwardRef } from "react"
 import useCart from "../hooks/useCart"
 
 CartProduct.displayName = "CartProduct"
 
-const CartProduct = forwardRef(({ id, title, price, rating, description, category, image, hasPrime }, ref) => {
+const CartProduct = ({ id, title, price, rating, description, category, image, hasPrime }) => {
     const { addToCart, removeFromCart } = useCart();
 
     return (
-        <div ref={ref} className="grid grid-cols-5">
+        <div className="grid grid-cols-5">
             <Image
                 src={image}
                 height={200}
@@ -64,6 +63,6 @@ const CartProduct = forwardRef(({ id, title, price, rating, description, categor
             <div className="my-4" />
         </div>
     )
-})
+}
 
 export default CartProduct
