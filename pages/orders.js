@@ -7,7 +7,6 @@ import Order from "../components/Order"
 const Orders = () => {
     const { isAuthenticated, Moralis, user } = useMoralis();
     const [orders, setOrders] = useState([]);
-    console.log(orders);
 
     useEffect(() => {
         const Transactions = Moralis.Object.extend("Transactions");
@@ -35,9 +34,9 @@ const Orders = () => {
                     <h2>Please sign in to see your orders</h2>
                 )}
                 <div className="mt-5 space-y-4">
-                    {orders?.map(({ attributes }) => (
+                    {orders?.map(({ id, attributes }) => (
                         <Order
-                            key={attributes.order_id}
+                            key={id}
                             id={attributes.order_id}
                             type={attributes.type}
                             amount={attributes.amount}

@@ -2,6 +2,8 @@ import Image from "next/image"
 import { forwardRef } from "react"
 import useCart from "../hooks/useCart"
 
+CartProduct.displayName = "CartProduct"
+
 const CartProduct = forwardRef(({ id, title, price, rating, description, category, image, hasPrime }, ref) => {
     const { addToCart, removeFromCart } = useCart();
 
