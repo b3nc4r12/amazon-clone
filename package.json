@@ -9,16 +9,32 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "@reduxjs/toolkit": "^1.8.5",
+    "@stripe/stripe-js": "^1.35.0",
+    "@thirdweb-dev/react": "^2.9.5",
+    "axios": "^0.27.2",
+    "ethers": "^5.6.9",
+    "firebase": "^9.9.4",
+    "firebase-admin": "^11.0.1",
+    "micro": "^9.4.1",
+    "moment": "^2.29.4",
+    "moralis": "^2.0.3",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-currency-formatter": "^1.1.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.3.0",
+    "react-redux": "^8.0.2",
+    "react-responsive-carousel": "^3.2.23",
+    "stripe": "^10.7.0"
   },
   "devDependencies": {
-    "@types/node": "18.7.6",
-    "@types/react": "18.0.17",
-    "@types/react-dom": "18.0.6",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "autoprefixer": "^10.4.8",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
-    "typescript": "4.7.4"
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
   }
 }
